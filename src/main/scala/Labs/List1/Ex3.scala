@@ -10,8 +10,9 @@ object Ex3 {
   }
 
   def main(args: Array[String]):Unit = {
-    println(a(2, 3));
-    println(a(3, 3));
-    println(a(2, 4))
+    println(a(2, 3))
+    println(a(3, 3))
+    println(a(1, 9))
+    //println(a(10,9)) gives stack overflow
   }
 }
