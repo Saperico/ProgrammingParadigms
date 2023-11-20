@@ -9,7 +9,11 @@ object Ex1 {
         case Nil => acc
         case head :: tail => {
           val (number, element) = head
-          helper(tail, acc ::: List.fill(number)(element))
+          def fill(number: Int, element: String): List[String] = {
+            if (number == 0) List()
+            else element :: fill(number - 1, element)
+          }
+          helper(tail, acc ::: fill(number, element))
         }
       }
     }

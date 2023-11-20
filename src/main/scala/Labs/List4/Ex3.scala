@@ -3,9 +3,8 @@ package Labs.List4
 object Ex3 {
   //Write a function that generates the Gray code for a given k
   //    example: gray(3) gives the result List(000, 001, 011, 010, 110, 111, 101, 100)
-  def gray(k: Int): List[String] = {
+  def grayCode(k: Int): List[String] = {
     if(k<=0) return List()
-    if (k == 1) return List("0", "1")
     def helper(k: Int, acc: List[String]): List[String] = {
       if (k == 1) acc
       else {
@@ -18,6 +17,6 @@ object Ex3 {
 
 
   def main(args: Array[String]): Unit = {
-    println(gray(3))
+    println(grayCode(1))
   }
 }
