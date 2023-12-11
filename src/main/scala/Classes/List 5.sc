@@ -17,10 +17,10 @@ println(lrepeatTest.toList)
 //fib: LazyList[Int]
 
 def fib: LazyList[Int] = {
-  def fibHelper(a: Int, b: Int): LazyList[Int] = {
-    LazyList.cons(a, fibHelper(b, a+b))
+  def fibHelper(a: Int, b: Int, acc: LazyList[Int]): LazyList[Int] = {
+    acc #::: fibHelper(b, a+b, LazyList(b))
   }
-  fibHelper(0, 1)
+  fibHelper(1, 1, LazyList(1))
 }
 
 val fibTest = fib.take(10)
