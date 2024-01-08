@@ -1,32 +1,5 @@
 package Labs.List8
 
-
-//Implement an application that supports the process
-//of pizza configuration and its cost calculation.
-//Each pizza can be one of three sizes: small, medium, large.
-//
-//There are four types of cakes: Italian, standard, pan pizza, and calzone.
-//
-//The price of each cake depends on the size and type.
-//If the dough is a calzone, only small and medium-sized pizzas are available.
-//It is configurable and is subject to change.
-//A pizza can contain many ingredients (but this ingredient list may be changed in the future):
-//-cheese
-//-blue cheese
-//-pepperoni
-//-sausage
-//-mushrooms
-//-onion
-//- hot pepper
-//By default, each ingredient is supplied in a standard amount, but a large or an extra-large amount can be provided upon customer request.
-//The price of each ingredient is individual and depends on the amount of the ingredient.
-//There are pre-defined pizza combinations, e.g.
-//
-//Margherita
-//
-//Funghi
-//
-//Vegetariana
 object Ex2 {
   enum Size:
     case Small, Medium, Large;
@@ -51,6 +24,7 @@ object Ex2 {
       case PizzaType.Funghi => toppings = List(Toppings.Cheese, Toppings.Mushrooms)
 
     def addTopping(topping: Toppings) = toppings = topping :: toppings
+
     def removeTopping(topping: Toppings) = toppings = toppings diff List(topping)
 
     def calculatePrice(): Double = {
@@ -78,10 +52,94 @@ object Ex2 {
       price
     }
   }
-  def main(args : Array[String]): Unit = {
-    val pizza = new Pizza(Size.Small, CakeType.italian, PizzaType.Margherita)
-    println(pizza.calculatePrice())
-    pizza.addTopping(Toppings.Pepperoni)
-    println(pizza.calculatePrice())
+  class PizzaConfigurator(){
+    def choosePizzaType(): PizzaType = {
+      println("Choose pizza type:")
+      PizzaType.values.zipWithIndex.foreach((pizzaType, index) => println(s"${index + 1}. ${pizzaType}"))
+      val choice = getNumberFromInput(maxNumber = PizzaType.values.length)
+      PizzaType.values(choice - 1)
+    }
+    def chooseCakeType(): CakeType = {
+      println("Choose cake type:")
+      CakeType.values.zipWithIndex.foreach((cakeType, index) => println(s"${index + 1}. ${cakeType}"))
+      val choice = getNumberFromInput(CakeType.values.length)
+      CakeType.values(choice - 1)
+    }
+    def choosePizzaSize(cakeType: CakeType): Size = {
+      println("Choose pizza size:")
+      var choice = 0
+      if(cakeType == CakeType.calzone){
+        println("1. Small")
+        println("2. Medium")
+        choice = getNumberFromInput(2)
+      }
+      else {
+        Size.values.zipWithIndex.foreach((size, index) => println(s"${index + 1}. ${size}"))
+        choice = getNumberFromInput(Size.values.length)
+      }
+      Size.values(choice - 1)
+    }
+    def configureToppingsOrEnd(pizza: Pizza): Unit = {
+      println("1. Add topping")
+      println("2. Remove topping")
+      println("3. End")
+      val choice = getNumberFromInput(3)
+      choice match
+        case 1 => addTopping(pizza)
+        case 2 => removeTopping(pizza)
+        case 3 => getCalculation(pizza)
+    }
+    def addTopping(pizza: Pizza): Unit = {
+      println("Choose topping:")
+      Toppings.values.zipWithIndex.foreach((topping, index) => println(s"${index + 1}. ${topping}"))
+      val choice = getNumberFromInput(Toppings.values.length)
+      pizza.addTopping(Toppings.values(choice - 1))
+      configureToppingsOrEnd(pizza)
+    }
+    def removeTopping(pizza: Pizza): Unit = {
+      println("Choose topping:")
+      pizza.toppings.zipWithIndex.foreach((topping, index) => println(s"${index + 1}. ${topping}"))
+      val choice = getNumberFromInput(pizza.toppings.length)
+      pizza.removeTopping(pizza.toppings(choice - 1))
+      configureToppingsOrEnd(pizza)
+    }
+    def getCalculation(pizza: Pizza) =
+    {
+      println("Your pizza:")
+      println("Pizza type: " + pizza.pizzaType)
+      println("Cake type: " + pizza.cakeType)
+      println("Size: " + pizza.pizzaSize)
+      println("Toppings: " + pizza.toppings)
+      println("Price: " + pizza.calculatePrice())
+    }
+    def run(): Unit = {
+      val pizzaType = choosePizzaType()
+      println("You choose " + pizzaType + " pizza")
+      val cakeType = chooseCakeType()
+      println("You choose " + cakeType + " cake")
+      val pizzaSize = choosePizzaSize(cakeType)
+      println("You choose " + pizzaSize + " size")
+      val pizza = new Pizza(pizzaSize, cakeType, pizzaType)
+      configureToppingsOrEnd(pizza)
+    }
+    def getNumberFromInput(maxNumber:Int): Int = {
+      var choice = scala.io.StdIn.readLine()
+      if(!choice.forall(_.isDigit)){
+        println("Input must be a number")
+        getNumberFromInput(maxNumber)
+      }
+      else {
+        var choiceInt = choice.toInt
+        if (choiceInt < 1 || choiceInt > maxNumber) {
+          println("Choose number from 1 to " + maxNumber)
+          choiceInt = getNumberFromInput(maxNumber)
+        }
+        choiceInt
+      }
+    }
+  }
+  def main(args: Array[String]): Unit = {
+    val configurator = new PizzaConfigurator()
+    configurator.run()
   }
 }

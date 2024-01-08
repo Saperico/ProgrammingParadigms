@@ -1,0 +1,65 @@
+Organizational Neuroscience
+
+The business landscape undergoes continual transformation, with companies adjusting to stay abreast of technological progress and emerging scientific breakthroughs.
+A particularly exciting and promising trend in recent times involves with integrating insights from neuroscience into business methodologies.
+What is neuroscience and why businesses should consider investing in it? 
+Neuroscience is a multidisciplinary field of study that focuses on the structure and function of the nervous system,
+which includes the brain and the spinal cord. It can help us understand how the brain works and how we function. We can apply this knowledge to improve our lives and the lives of others.
+Firstly let’s discuss why businesses should invest in neuroscience approach to business-employee relationship
+
+The brain is the most complex organ in the human body, and it is responsible for all of our thoughts, feelings, and actions.
+In the brain we have several main regions, which are responsible for different functions.
+The prefrontal cortex is responsible for our executive functions, such as planning, decision making, and problem solving.
+The limbic system is responsible for our emotions, motivation, and memory.
+The brain stem is responsible for our basic survival functions, such as breathing, heart rate, and blood pressure.
+Correct functioning of prefrontal cortex is actually the most beneficial for a prosperous workers and executives.
+For a business to be successful it needs growth and for growth it needs to be productive and for productivity it needs to have happy, healthy and creative employees
+
+What if we would have unhappy, deregulated and over-stressed employees?
+Studies show that as much as 10% of Polish employees absence from work in 2022 was due to mental health issues.
+The cost of mental health issues in the workplace is estimated to be around 6% of GDP in the EU, which is equivalent to €600 billion per year.
+Also 1 in 6 people in EU workforces are affected by mental health issues.
+First and foremost, a happy workforce is a more productive one. Studies show that employees who feel satisfied and content in their roles tend to be more engaged, creative, and motivated, and they are as much as 13% more productive.
+Moreover, a positive and joyful work environment fosters stronger teamwork and collaboration, as individuals are more likely to communicate effectively and support one another. Improved employee happiness also correlates with reduced turnover rates, saving businesses the costs associated with recruitment and training.
+
+Dr Dawn Harris, a Associate Fellow of the British Psychological Society proposes for individual approach to each employee,
+by firstly surveying (using an online, free survey) all the employees and if the results show that there is a need for help, then a neuro-feedback treatment should be applied.
+
+Neurofeedback, also known as EEG biofeedback or neurotherapy, is a type of biofeedback that uses real-time monitoring of brainwave activity to teach self-regulation of brain function.
+Recorded
+What it means that 
+
+
+As researchers show ,the top-down approach of when the person is using their ,rational, cognitively controlled, place , problem solving- speaking rationally, and if they’re in a place of 
+
+Another way of using neuroscience in business if to use what is called “neuromarketing”.
+Nobel Laureate Francis Crick proposed the "astonishing hypothesis" that human feelings, thoughts, and actions, including consciousness, result from neural activity in the brain. Marketers explore this idea through neuromarketing, studying brain activity to predict and influence consumer behavior. Techniques involve brain scanning (fMRI, EEG) and physiological tracking (eye movement, facial expressions, heart rate). Despite skepticism, recent studies show neuromarketing's potential.
+
+Tools of Neuromarketing:
+
+Brain Scanning:
+
+fMRI: Detects blood flow changes, providing detailed emotional responses.
+EEG: Records electrical signals, less precise but measures changes rapidly.
+Physiological Tracking:
+
+Eye Tracking: Measures attention and arousal.
+Facial Coding: Reads facial muscle movements to gauge emotional responses.
+Biometrics: Monitors heart rate, respiration, and skin conductivity.
+Promising Studies:
+
+Researchers used fMRI to show brand knowledge influences how the brain perceives a beverage.
+INSEAD's study revealed brain scans reflecting a preference for a higher-priced wine, even when all wines were the same.
+Neuroscientific tools predicted product success better than traditional methods, as seen in studies on music popularity and antismoking ads.
+Challenges and Future Directions:
+
+Despite advances, marketers remain cautious about expensive brain-scanning tools.
+Physiological proxies (eye tracking, facial coding) are more accessible and applicable for advertising design.
+Concerns about overselling and ethical considerations arise as neuromarketing explores influencing consumer behavior directly.
+Future possibilities include better segmentation based on brain differences, influencing behavior during sleep, hormone manipulation, and temporary neural inhibition.
+Conclusion:
+
+While neuromarketing tools are not yet mainstream, they offer potential advantages in predicting and influencing consumer behavior.
+Companies considering neuromarketing should carefully assess vendors and explore ethical implications.
+Advancements in neuroscience continue, with startups aiming for portable and affordable brain imaging tools.
+Neuromarketing remains a dynamic field, with ongoing research and potential applications challenging ethical boundaries.

@@ -20,14 +20,14 @@ object Ex1 {
     override def toString = real + " + " + imaginary + "i"
   }
   def main(args: Array[String]): Unit = {
-    val a = new complexNumber(1, 2)
-    val b = new complexNumber(3, 4)
-    println(a + b)
-    println(a - b)
-    println(a * b)
-    println(a / b)
-    println(a == b)
-    println(a == new complexNumber(1, 2))
-    println(a.conjugation())
+    val a = new complexNumber(1, -5) // 1 - 5i
+    val b = new complexNumber(3, 4) // 3 + 4i
+    println(a + b) // 4.0 - 1.0i
+    println(a - b)// -2.0 - 9.0i
+    println(a * b) // 23.0 - 11.0i
+    println(a / b) // -0.68 - 0.76i
+    println(a == b) // false
+    println(a == new complexNumber(1, -5)) // true
+    println(a.conjugation()) // 1 + 5i
   }
 }

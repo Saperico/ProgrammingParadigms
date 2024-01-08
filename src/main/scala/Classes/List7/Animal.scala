@@ -18,9 +18,10 @@ object Animal {
     override def make_sound(): Unit = println("Chirp")
   }
 
-  def main(args: Array[String]): Unit =
+  def main(args: Array[String]): Unit = {
     val list = List(new Dog, new Cat, new Bird)
     for (animal <- list) {
       animal.make_sound()
     }
+  }
 }

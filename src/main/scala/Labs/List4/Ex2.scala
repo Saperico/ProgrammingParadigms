@@ -16,7 +16,8 @@ object Ex2 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(multiplicate(List(1, 2, 5), List(2, 3, 2, 4)))
+    println(multiplicate(List(1, 2, 5), List(2, 3, 2, 4))) //List(1, 1, 2, 2, 2, 5, 5)
+    println(multiplicate(List(1, 2, 3), List (0, 3, 1, 4))) //List(2, 2, 2, 3))
   }
 }
 
